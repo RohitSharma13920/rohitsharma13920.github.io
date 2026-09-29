@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Space — Access Gateway</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandOrange: '#FF5E00',
+                        lightOrange: '#FFF4EE',
+                        vibrantAmber: '#FF8800',
+                        deepCharcoal: '#0F1016',
+                        softGray: '#F7F7F9'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Grid Canvas */
+        .bg-grid {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 94, 0, 0.06) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 94, 0, 0.06) 1px, transparent 1px);
+        }
+
+        /* Floating 3D Badge Keyframes */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(3deg); }
+        }
+        @keyframes floatReverse {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(10px) rotate(-4deg); }
+        }
+        .float-1 { animation: floatSlow 4s ease-in-out infinite; }
+        .float-2 { animation: floatReverse 4.5s ease-in-out infinite; }
+
+        /* Claymorphism Soft 3D Shadow */
+        .clay-card {
+            background: #ffffff;
+            box-shadow: 
+                20px 20px 60px rgba(255, 94, 0, 0.08),
+                -10px -10px 40px rgba(255, 255, 255, 0.9),
+                inset 0 0 0 1px rgba(255, 94, 0, 0.12);
+        }
+
+        .clay-button {
+            box-shadow: 0 12px 28px -6px rgba(255, 94, 0, 0.45);
+        }
+        .clay-button:hover {
+            box-shadow: 0 16px 32px -4px rgba(255, 94, 0, 0.55);
+        }
+
+        /* Eyes Transition */
+        .pupil {
+            transition: transform 0.08s ease-out;
+        }
+
+        /* Hands Covering Eyes for Password */
+        .hand {
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-origin: bottom center;
+        }
+        .hands-covering-left {
+            transform: translateY(-56px) translateX(28px) rotate(-28deg) !important;
+        }
+        .hands-covering-right {
+            transform: translateY(-56px) translateX(-28px) rotate(28deg) !important;
+        }
+    </style>
+</head>
+<body class="bg-[#FCFCFE] bg-grid text-deepCharcoal min-h-screen flex flex-col justify-between p-4 md:p-8 font-sans selection:bg-brandOrange selection:text-white relative overflow-x-hidden">
+
+    <!-- Top Floating Header Bar -->
+    <header class="max-w-6xl mx-auto w-full flex items-center justify-between py-4 relative z-20">
+        <div class="flex items-center gap-3">
+            <div class="w-11 h-11 bg-brandOrange text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-lg shadow-brandOrange/30">
+                ⚡
+            </div>
+            <div>
+                <span class="font-display font-extrabold text-xl tracking-tight text-deepCharcoal block">DEV.PORTFOLIO</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-brandOrange">System Gateway v3.4</span>
+            </div>
+        </div>
+        
+        <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-lightOrange border border-brandOrange/20 text-brandOrange text-xs font-bold">
+            <span class="w-2 h-2 rounded-full bg-brandOrange animate-ping"></span>
+            Motion Graphic Studio Ready
+        </div>
+    </header>
+
+    <!-- Main Container: Massive Typography + 3D Cartoon Character + Form -->
+    <main class="max-w-6xl mx-auto w-full my-auto py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- Left Side: Giant Bold Typography & Cartoon Character -->
+        <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left relative">
+            
+            <!-- Floating Tech Badges -->
+            <div class="absolute -top-6 left-6 float-1 bg-white border border-brandOrange/20 px-3.5 py-1.5 rounded-2xl shadow-xl flex items-center gap-2 text-xs font-black text-deepCharcoal">
+                <span class="text-brandOrange">●</span> FULL-STACK AI
+            </div>
+            <div class="absolute top-28 right-8 float-2 bg-white border border-brandOrange/20 px-3.5 py-1.5 rounded-2xl shadow-xl flex items-center gap-2 text-xs font-black text-brandOrange">
+                <i class="fas fa-cube"></i> 3D MOTION
+            </div>
+
+            <!-- Giant Editorial Text -->
+            <div class="mb-4">
+                <span class="text-xs font-black uppercase tracking-[0.3em] text-brandOrange mb-2 block">
+                    Welcome to the Workspace
+                </span>
+                <h1 class="font-display text-5xl sm:text-7xl font-extrabold tracking-tighter text-deepCharcoal leading-[0.95]">
+                    ENTER THE <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandOrange to-vibrantAmber">CREATIVE</span><br>
+                    MATRIX.
+                </h1>
+            </div>
+
+            <p class="text-zinc-500 font-medium text-sm sm:text-base max-w-md mb-6 leading-relaxed">
+                Step inside the high-octane 3D developer ecosystem. Experience interactive architectures, real-time code telemetry, and visual designs.
+            </p>
+
+            <!-- 3D Interactive Motion Cartoon Character (SVG with dynamic eyes) -->
+            <div class="relative w-64 h-64 sm:w-72 sm:h-72 mt-2">
+                
+                <!-- Glowing Orange Backdrop Circle -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-brandOrange/20 to-vibrantAmber/10 rounded-full blur-2xl"></div>
+
+                <svg id="dev-character" viewBox="0 0 300 300" class="w-full h-full relative z-10 drop-shadow-2xl">
+                    <defs>
+                        <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FF5E00" />
+                            <stop offset="100%" stop-color="#D94B00" />
+                        </linearGradient>
+                        <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FF7B29" />
+                            <stop offset="100%" stop-color="#FF5E00" />
+                        </linearGradient>
+                        <linearGradient id="laptopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#232634" />
+                            <stop offset="100%" stop-color="#0F1016" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Character Body & Hoodie -->
+                    <path d="M 90 230 C 90 190, 210 190, 210 230 L 220 290 L 80 290 Z" fill="url(#hoodieGrad)" />
+                    
+                    <!-- White Drawstrings -->
+                    <line x1="135" y1="200" x2="135" y2="235" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+                    <line x1="165" y1="200" x2="165" y2="235" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+
+                    <!-- Big Cartoon Head -->
+                    <rect x="90" y="70" width="120" height="120" rx="42" fill="#FFE5D4" stroke="#FF5E00" stroke-width="3" />
+
+                    <!-- Cool Cap (Orange) -->
+                    <path d="M 80 85 C 80 40, 220 40, 220 85 Z" fill="url(#bodyGrad)" />
+                    <path d="M 65 85 Q 150 75 235 85 Q 235 95 65 95 Z" fill="#FF5E00" />
+
+                    <!-- Eye Whites -->
+                    <g id="eyes">
+                        <!-- Left Eye -->
+                        <circle cx="125" cy="125" r="18" fill="#FFFFFF" stroke="#0F1016" stroke-width="3" />
+                        <!-- Left Pupil -->
+                        <g id="left-pupil" class="pupil">
+                            <circle cx="125" cy="125" r="8" fill="#0F1016" />
+                            <circle cx="122" cy="122" r="3" fill="#FFFFFF" />
+                        </g>
+
+                        <!-- Right Eye -->
+                        <circle cx="175" cy="125" r="18" fill="#FFFFFF" stroke="#0F1016" stroke-width="3" />
+                        <!-- Right Pupil -->
+                        <g id="right-pupil" class="pupil">
+                            <circle cx="175" cy="125" r="8" fill="#0F1016" />
+                            <circle cx="172" cy="122" r="3" fill="#FFFFFF" />
+                        </g>
+                    </g>
+
+                    <!-- Cheerful Smile / Mouth -->
+                    <path id="mouth" d="M 135 155 Q 150 170 165 155" fill="none" stroke="#FF5E00" stroke-width="4" stroke-linecap="round" />
+
+                    <!-- Cute Cheeks -->
+                    <circle cx="108" cy="145" r="7" fill="#FF5E00" opacity="0.25" />
+                    <circle cx="192" cy="145" r="7" fill="#FF5E00" opacity="0.25" />
+
+                    <!-- 3D Glowing Developer Laptop -->
+                    <polygon points="75,260 225,260 210,215 90,215" fill="url(#laptopGrad)" stroke="#FF5E00" stroke-width="2" />
+                    <!-- Laptop Glowing Orange Apple / Dev Logo -->
+                    <circle cx="150" cy="235" r="7" fill="#FF5E00" class="animate-pulse" />
+
+                    <!-- Hands (Peek-a-boo functionality) -->
+                    <!-- Left Hand -->
+                    <g id="left-hand" class="hand">
+                        <circle cx="85" cy="245" r="16" fill="#FFE5D4" stroke="#FF5E00" stroke-width="3" />
+                    </g>
+                    <!-- Right Hand -->
+                    <g id="right-hand" class="hand">
+                        <circle cx="215" cy="245" r="16" fill="#FFE5D4" stroke="#FF5E00" stroke-width="3" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Right Side: Clean White & Orange Claymorphic Form Card -->
+        <div class="lg:col-span-5 w-full">
+            <div class="clay-card rounded-[32px] p-8 sm:p-10 border border-brandOrange/15 relative overflow-hidden">
+                
+                <!-- Corner Ambient Accent -->
+                <div class="absolute -top-12 -right-12 w-32 h-32 bg-brandOrange/15 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="mb-8">
+                    <span class="text-[11px] font-black uppercase tracking-widest text-brandOrange bg-lightOrange px-3 py-1 rounded-full border border-brandOrange/20 inline-block mb-2">
+                        Single Sign-On
+                    </span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-black text-deepCharcoal tracking-tight">
+                        Launch Terminal
+                    </h2>
+                    <p class="text-xs text-zinc-500 mt-1 font-medium">Enter your credentials to enter the interactive portfolio.</p>
+                </div>
+
+                <!-- Form -->
+                <form onsubmit="handlePortfolioLogin(event)" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-black uppercase tracking-wider text-zinc-600 mb-2">
+                            Developer Alias
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-brandOrange">
+                                <i class="fas fa-at"></i>
+                            </span>
+                            <input type="text" id="username" required autocomplete="off"
+                                placeholder="e.g. rohit.dev"
+                                onfocus="handleInputFocus('user')"
+                                class="w-full bg-softGray border-2 border-zinc-200/80 rounded-2xl pl-11 pr-4 py-3.5 text-sm font-semibold text-deepCharcoal placeholder-zinc-400 focus:outline-none focus:border-brandOrange focus:bg-white transition duration-200">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <label class="block text-xs font-black uppercase tracking-wider text-zinc-600">
+                                Passkey
+                            </label>
+                            <span class="text-[11px] text-brandOrange font-bold cursor-pointer hover:underline">Hint: explore</span>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-brandOrange">
+                                <i class="fas fa-fingerprint"></i>
+                            </span>
+                            <input type="password" id="password" required
+                                placeholder="••••••••"
+                                onfocus="handleInputFocus('pass')"
+                                onblur="handleInputBlur()"
+                                class="w-full bg-softGray border-2 border-zinc-200/80 rounded-2xl pl-11 pr-4 py-3.5 text-sm font-semibold text-deepCharcoal placeholder-zinc-400 focus:outline-none focus:border-brandOrange focus:bg-white transition duration-200">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="login-btn"
+                        class="clay-button w-full py-4 px-6 bg-gradient-to-r from-brandOrange to-vibrantAmber hover:from-orange-600 hover:to-brandOrange text-white font-black text-sm uppercase tracking-wider rounded-2xl transition duration-300 flex items-center justify-center gap-2 group">
+                        <span id="btn-text">Enter 30-World Portfolio</span>
+                        <i id="btn-icon" class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1.5"></i>
+                    </button>
+                </form>
+
+                <!-- Quick Preview Features -->
+                <div class="mt-8 pt-6 border-t border-zinc-100 grid grid-cols-2 gap-3 text-center">
+                    <div class="bg-lightOrange/60 p-2.5 rounded-2xl border border-brandOrange/15">
+                        <span class="text-[10px] font-bold text-zinc-500 uppercase block">Total Sections</span>
+                        <span class="font-display font-black text-brandOrange text-base">30 Stages</span>
+                    </div>
+                    <div class="bg-lightOrange/60 p-2.5 rounded-2xl border border-brandOrange/15">
+                        <span class="text-[10px] font-bold text-zinc-500 uppercase block">Visual Engine</span>
+                        <span class="font-display font-black text-deepCharcoal text-base">3D Motion</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Footer -->
+    <footer class="max-w-6xl mx-auto w-full py-4 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 font-medium relative z-10 border-t border-zinc-100">
+        <div>© 2026 Creative Tech Portfolio • Motion Graphics Edition</div>
+        <div class="flex items-center gap-4 mt-2 sm:mt-0 font-bold text-zinc-600">
+            <span class="hover:text-brandOrange cursor-pointer">Three.js</span>
+            <span class="hover:text-brandOrange cursor-pointer">GSAP</span>
+            <span class="hover:text-brandOrange cursor-pointer">Tailwind</span>
+            <span class="hover:text-brandOrange cursor-pointer">FastAPI</span>
+        </div>
+    </footer>
+
+    <!-- Interactive Motion Character Scripts -->
+    <script>
+        const leftPupil = document.getElementById('left-pupil');
+        const rightPupil = document.getElementById('right-pupil');
+        const leftHand = document.getElementById('left-hand');
+        const rightHand = document.getElementById('right-hand');
+        const mouth = document.getElementById('mouth');
+
+        // Mouse Move Eyes Tracking
+        window.addEventListener('mousemove', (e) => {
+            const eyes = document.getElementById('eyes');
+            const rect = eyes.getBoundingClientRect();
+            const eyeCenterX = rect.left + rect.width / 2;
+            const eyeCenterY = rect.top + rect.height / 2;
+
+            const angle = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+            const distance = Math.min(6, Math.hypot(e.clientX - eyeCenterX, e.clientY - eyeCenterY) / 30);
+
+            const pupilX = Math.cos(angle) * distance;
+            const pupilY = Math.sin(angle) * distance;
+
+            leftPupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+            rightPupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+        });
+
+        // Peek-a-boo Animation for Password
+        function handleInputFocus(type) {
+            if (type === 'pass') {
+                leftHand.classList.add('hands-covering-left');
+                rightHand.classList.add('hands-covering-right');
+                mouth.setAttribute('d', 'M 140 160 Q 150 160 160 160'); // neutral mouth
+            } else {
+                handleInputBlur();
+                mouth.setAttribute('d', 'M 135 155 Q 150 175 165 155'); // big smile
+            }
+        }
+
+        function handleInputBlur() {
+            leftHand.classList.remove('hands-covering-left');
+            rightHand.classList.remove('hands-covering-right');
+            mouth.setAttribute('d', 'M 135 155 Q 150 170 165 155');
+        }
+
+        // Login Handler
+        function handlePortfolioLogin(event) {
+            event.preventDefault();
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+            const user = document.getElementById('username').value;
+
+            btnText.textContent = "Loading 3D Universe...";
+            btnIcon.className = "fas fa-circle-notch fa-spin text-xs";
+
+            localStorage.setItem('portfolio_user', user);
+
+            setTimeout(() => {
+                window.location.href = 'portfolio.html';
+            }, 900);
+        }
+    </script>
+</body>
+</html>
